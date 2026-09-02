@@ -818,10 +818,12 @@ class Route_mapsTemplate(NetworkTemplate):
             "name": "set.med",
             "getval": re.compile(
                 r"""
-                \s*set\smed\s
+                \s*set\smed\s*
                 (?P<increment>\+)?
                 (?P<decrement>\-)?
+                \s*
                 (?P<value>\d+)?
+                \s*
                 (?P<igp_cost>igp-cost)?
                 (?P<max_reachable>max-reachable)?
                 (?P<parameter>\$\w+)?
